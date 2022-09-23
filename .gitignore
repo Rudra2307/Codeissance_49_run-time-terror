@@ -7,6 +7,6 @@ yarn.lock
 .firebase
 build
 .firebaserc
-# .env
+.env
 
 

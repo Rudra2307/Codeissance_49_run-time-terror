@@ -1,6 +1,7 @@
 const path = require("path");
 const http = require("http");
 require("dotenv").config();
+const cors = require("cors");
 
 // const redis = require("redis");
 const mongoose = require("mongoose");
@@ -134,6 +135,7 @@ io.on("connect", (socket) => {
 });
 
 app.use(bodyParser.json());
+app.use(cors());
 app.use(express.static(path.join(__dirname, "public")));
 app.use("/images", express.static(path.join(__dirname, "images")));
 app.use("/videos", express.static(path.join(__dirname, "videos")));

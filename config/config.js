@@ -11,17 +11,6 @@ exports.refereshToken = process.env.REFRESH_TOKEN_SECRET;
 exports.accessTokenLife = process.env.ACCESS_TOKEN_LIFE;
 exports.refereshTokenLife = process.env.REFRESH_TOKEN_LIFE;
 
-//Redis
-exports.redisHost = process.env.REDIS_HOST;
-exports.redisPassword = process.env.REDIS_PASSWORD;
-exports.redisPort = process.env.REDIS_PORT;
-
-// google auth
-exports.googleAuth = process.env.OAuth2Client;
-
-//stripe payment
-exports.stripePayment = process.env.STRIPE_SECRET_TOKEN;
-
 // email password
-exports.email = process.env.EMAIL;
-exports.password = process.env.PASSWORD;
+// exports.email = process.env.EMAIL;
+// exports.password = process.env.PASSWORD;

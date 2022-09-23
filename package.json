@@ -4,7 +4,7 @@
   "description": "backend of coursera",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "node app.js",
     "test": "jest --watchAll --coverage --verbose --silent --runInBand"
   },
   "jest": {

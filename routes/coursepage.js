@@ -4,8 +4,12 @@ const router = express.Router();
 const courseController = require("../controllers/coursepage");
 const Auth = require("../Authentication/is-auth");
 
-// router.get('/course/:courseName/:courseId',Auth.authentication,courseController.CoursePage);
-router.get("/course/:courseName/:courseId", courseController.CoursePage);
+router.get(
+  "/course/:courseName/:courseId",
+  Auth.authentication,
+  courseController.CoursePage
+);
+
 router.post(
   "/home/:courseId/:courseName",
   Auth.authentication,

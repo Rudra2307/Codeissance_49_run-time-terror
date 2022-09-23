@@ -162,7 +162,7 @@ if (process.env.NODE_ENV !== "test") {
   mongoose
     .connect(MONGODB_URI, { useUnifiedTopology: true, useNewUrlParser: true })
     .then(() => {
-      server.listen(5000);
+      server.listen(8080);
       console.log("Server Started!");
     })
     .catch((err) => {

@@ -1,16 +1,16 @@
 {
-  "name": "courserabackend",
+  "name": "runtimeterrorbackend",
   "version": "1.0.0",
-  "description": "backend of coursera",
+  "description": "backend of Runtimeterror",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "nodemon app.js",
     "test": "jest --watchAll --coverage --verbose --silent --runInBand"
   },
   "jest": {
     "testEnvironment": "node"
   },
-  "author": "Ayush",
+  "author": "Runtimeterror",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",

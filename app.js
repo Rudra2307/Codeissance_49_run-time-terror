@@ -158,11 +158,12 @@ app.use(homeRoutes);
 app.use(courseRoutes);
 // app.use(stripeRoute);
 
+const PORT = process.env.PORT || 5000;
 if (process.env.NODE_ENV !== "test") {
   mongoose
     .connect(MONGODB_URI, { useUnifiedTopology: true, useNewUrlParser: true })
     .then(() => {
-      server.listen(8080);
+      server.listen(PORT);
       console.log("Server Started!");
     })
     .catch((err) => {

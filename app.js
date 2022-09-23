@@ -17,6 +17,7 @@ const authRoutes = require("./routes/auth");
 const teacherRoutes = require("./routes/teacher");
 const homeRoutes = require("./routes/homepage");
 const courseRoutes = require("./routes/coursepage");
+const jobRoutes = require("./routes/jobs")
 
 // const {addRoom,getUser} = require('./chat');
 
@@ -155,6 +156,7 @@ app.use(authRoutes);
 app.use(teacherRoutes);
 app.use(homeRoutes);
 app.use(courseRoutes);
+app.use(jobRoutes);
 
 const PORT = process.env.PORT || 5000;
 if (process.env.NODE_ENV !== "test") {

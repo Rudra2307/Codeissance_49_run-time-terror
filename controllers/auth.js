@@ -7,13 +7,13 @@ const sendgridTransport = require("nodemailer-sendgrid-transport");
 const { validationResult } = require("express-validator");
 const api_key = require("../config/config");
 
-// const transporter = nodemailer.createTransport(
-//   sendgridTransport({
-//     auth: {
-//       api_key: api_key.Sendgrid,
-//     },
-//   })
-// );
+const transporter = nodemailer.createTransport(
+  sendgridTransport({
+    auth: {
+      api_key: api_key.Sendgrid,
+    },
+  })
+);
 
 // var transporter = nodemailer.createTransport({
 //   service: "gmail",
@@ -23,14 +23,14 @@ const api_key = require("../config/config");
 //   },
 // });
 
-var transporter = nodemailer.createTransport({
-  host: "smtp.mailtrap.io",
-  port: 2525,
-  auth: {
-    user: "a63924301a2096",
-    pass: "0da193bf8929ed",
-  },
-});
+// var transporter = nodemailer.createTransport({
+//   host: "smtp.mailtrap.io",
+//   port: 2525,
+//   auth: {
+//     user: "a63924301a2096",
+//     pass: "0da193bf8929ed",
+//   },
+// });
 
 exports.signup = (req, res) => {
   const email = req.body.email;

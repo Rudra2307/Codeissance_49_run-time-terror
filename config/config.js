@@ -11,6 +11,9 @@ exports.refereshToken = process.env.REFRESH_TOKEN_SECRET;
 exports.accessTokenLife = process.env.ACCESS_TOKEN_LIFE;
 exports.refereshTokenLife = process.env.REFRESH_TOKEN_LIFE;
 
+exports.redishost = process.env.REDIS_HOST;
+exports.redisport = process.env.REDIS_PORT;
+exports.redispassword = process.env.REDIS_PASSWORD;
 // email password
 // exports.email = process.env.EMAIL;
 // exports.password = process.env.PASSWORD;

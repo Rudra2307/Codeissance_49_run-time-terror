@@ -19,5 +19,7 @@ router.get(
 router.post("/unbookmark", Auth.authentication, courseController.unbookmark);
 router.put("/rating", Auth.authentication, courseController.rating);
 router.get("/pdf/download/:courseId", courseController.pdf);
+router.get("/course/enroll/:couseId", Auth.authentication, courseController.enroll);
+router.post("/course/feedback/:courseId", Auth.authentication, courseController.feedback)
 
 module.exports = router;

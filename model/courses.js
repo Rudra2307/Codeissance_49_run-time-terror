@@ -52,6 +52,11 @@ const courseSchema = new Schema(
         ref: "User",
       },
     ],
+    feedback: [{
+      type: Schema.Types.ObjectId,
+      required: false,
+      ref: "User"
+    }],
 
     videoContent: [
       {

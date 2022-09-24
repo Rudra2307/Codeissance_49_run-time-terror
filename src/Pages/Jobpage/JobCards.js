@@ -12,7 +12,6 @@ const JobCards = (props) => {
     const handleClose = () => setShow(false)
     const handleShow = () => setShow(true)
     const [show_alert,setShow_alert] =useState(false);
-
     if (show_alert){  
       return (  
         <div className="App">  
@@ -34,10 +33,13 @@ const JobCards = (props) => {
           <h3 class="card-title">{props.company}</h3>
           <p class="card-text">{props.description}</p>
           {props.skill?.map((item) => (
-            <span class="badge badge-pill badge-primary  mx-2">{item}</span>
+            <span class="badge badge-pill badge-all mx-2 ">{item}</span>
           ))}
           <h3 class="card-title">{props.category}</h3>
-          <h3 class="card-info">Upto ₹{props.salary}</h3>
+          <h5 class="card-info">Upto ₹{props.salary}</h5>
+
+          <div className="align-bottom">
+            
 
           <a href="#" class="btn btn-primary bottom align-self-end mx-2" onClick={()=>{
             setShow(true)
@@ -45,6 +47,8 @@ const JobCards = (props) => {
             Description
           </a>
           <a href="#" onClick={()=>{setShow_alert(true) }} class="btn btn-primary bottom align-self-end" >Apply</a>
+          </div>
+          
         </div>
       </div>
     </div>

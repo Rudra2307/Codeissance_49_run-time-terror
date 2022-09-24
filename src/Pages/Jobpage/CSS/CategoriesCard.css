@@ -145,12 +145,18 @@
   display: flex;
 }
 .btn-primary,.badge-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
-  background-color: #8064A2 !important;
+  background-color: #9669ce !important;
 }
 .Course-rating {
   text-align: left;
   color: #3c4852;
 
+}
+
+.badge-all{
+  background-color: #9269c5 !important;
+  color:white;
+  font: normal normal normal  Gilroy;
 }
 
 .Course-star {

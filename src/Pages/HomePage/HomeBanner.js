@@ -19,18 +19,18 @@ class HomepageBanner extends Component {
 
     if (this.props.img === "all") {
       text = (
-        <p className="Banner-text">
+        <p className="Banner-text my-4">
           Best place to <br />
           learn new things
         </p>
       );
       Banner = (
         <div className="BannerSection">
-          <img className="BannerImage" src={all} alt="banner1" />
+          <img className="BannerImage fit" src={all} alt="banner1" />
         </div>
       );
     } else if (this.props.img === "Cooking") {
-      text = <p className="Banner-text my-5">{this.props.img}</p>;
+      text = <p className="Banner-text ">{this.props.img}</p>;
       Banner = (
         <div className="BannerSection">
           <img className="BannerImage" src={Cooking} />

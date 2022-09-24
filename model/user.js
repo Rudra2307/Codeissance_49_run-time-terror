@@ -1,52 +1,51 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
+  name: {
+    type: String,
+    required: true,
+  },
 
-    name:{
-        type:String,
-        required:true,
-    },
-    
-    email:{
-        type:String,
-        required:true,
-    },
-    password:{
-        type:String,
-        required:true
-    },
-  
-    isverified:{
-        type:Boolean,
-        required:true
-    },
-    resetVerified:{
-        type:Boolean,
-        required:false,
-    },
+  email: {
+    type: String,
+    required: true,
+  },
+  password: {
+    type: String,
+    required: true,
+  },
 
-    courses:[
-        {
-            type:Schema.Types.ObjectId,
-            required:true,
-            ref:"Course",
-        }
-    ],
+  isverified: {
+    type: Boolean,
+    required: true,
+  },
+  resetVerified: {
+    type: Boolean,
+    required: false,
+  },
 
-    preferences:[{type:String}],
+  courses: [
+    {
+      type: Schema.Types.ObjectId,
+      required: true,
+      ref: "Course",
+    },
+  ],
 
-    Bookmark:[
-        {
-            type:Schema.Types.ObjectId,
-            required:false,
-            ref:"Course",
-        }]
+  preferences: [{ type: String }],
 
-    //Token:String,
-    //resetToken:String,
-    //resetTokenExpiration:Date,
-    
+  Bookmark: [
+    {
+      type: Schema.Types.ObjectId,
+      required: false,
+      ref: "Course",
+    },
+  ],
+
+  //Token:String,
+  //resetToken:String,
+  //resetTokenExpiration:Date,
 });
 
-module.exports = mongoose.model('User',userSchema);
+module.exports = mongoose.model("User", userSchema);
